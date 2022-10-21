@@ -1,10 +1,24 @@
 <main>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <% user.forEach(item => { %>
-            <td><%= item.username %></td>
-          <% }) %>>
+  <div class="container">
+    <div class="row">
+      
+    <div class="d-flex flex-column bd-highlight mb-3">
+      <% user.forEach(item => { %>
+        <div class="d-flex justify-content-center">
+          <img class="rounded-circle" src="<%= item.Logo %> " width="200px" height="200px" alt="logo" >
         </div>
-      </div>
-  </main>
+        <br>
+        <div class="d-flex justify-content-center">
+          <h1><%= item.username %></h1>
+        </div>
+        
+        <br>
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-primary btn-lg">Facebook
+            <a href="<%= item.Facebook %> "></a>
+          </button>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</main>
